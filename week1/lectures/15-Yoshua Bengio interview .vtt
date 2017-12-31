@@ -1,0 +1,1805 @@
+WEBVTT
+
+1
+00:00:03.182 --> 00:00:05.735
+Hi, Yoshua, I'm really glad
+you could join us here today.
+
+2
+00:00:05.735 --> 00:00:06.602
+>> I'm very glad, too.
+
+3
+00:00:06.602 --> 00:00:11.892
+>> Today you're not just a researcher or
+engineer in deep learning.
+
+4
+00:00:11.892 --> 00:00:16.458
+You've become one of the institutions and
+one of the icons of deep learning, but
+
+5
+00:00:16.458 --> 00:00:19.660
+I'd really like to hear
+the story of how it started.
+
+6
+00:00:19.660 --> 00:00:26.242
+So how did you end up getting into deep
+learning, and then pursuing this journey?
+
+7
+00:00:26.242 --> 00:00:31.289
+>> Right, well, actually,
+it started when I was a kid, adolescent,
+
+8
+00:00:31.289 --> 00:00:35.912
+reading a lot of science fiction,
+like, I guess, many of us.
+
+9
+00:00:35.912 --> 00:00:42.374
+And when I started my graduate studies in
+1985, I started reading neural net papers,
+
+10
+00:00:42.374 --> 00:00:48.040
+and that's where I got all excited,
+and it became really a passion.
+
+11
+00:00:48.040 --> 00:00:52.230
+>> And actually, what was that like in,
+what, mid 80s, right, 1985,
+
+12
+00:00:52.230 --> 00:00:54.492
+reading these papers, do you remember?
+
+13
+00:00:54.492 --> 00:00:55.545
+>> Yeah.
+
+14
+00:00:59.565 --> 00:01:05.277
+Well, coming from the courses I had taking
+in classical AI with expert systems,
+
+15
+00:01:05.277 --> 00:01:09.981
+and suddenly discovering that there
+was all this world of thinking
+
+16
+00:01:09.981 --> 00:01:14.445
+about how humans might be learning,
+and human intelligence.
+
+17
+00:01:14.445 --> 00:01:19.347
+And how we might draw connections between
+that and artificial intelligence and
+
+18
+00:01:19.347 --> 00:01:21.100
+computers.
+
+19
+00:01:21.100 --> 00:01:25.230
+That was really exciting for
+me when I discovered this literature, and
+
+20
+00:01:25.230 --> 00:01:27.730
+I started reading the connectionists,
+of course.
+
+21
+00:01:27.730 --> 00:01:31.682
+So the papers from Geoff Hinton,
+[INAUDIBLE], and so on.
+
+22
+00:01:31.682 --> 00:01:38.462
+And I worked on recurrent nets,
+I worked on speech recognition,
+
+23
+00:01:38.462 --> 00:01:42.666
+I worked on HMNs, so graphical models.
+
+24
+00:01:42.666 --> 00:01:50.295
+And then quickly, I moved to AT&T Bell
+Labs and MIT, where I did postdocs.
+
+25
+00:01:50.295 --> 00:01:54.629
+And that's where I discovered some
+of the issues with the long-term
+
+26
+00:01:54.629 --> 00:01:57.335
+dependencies with training neural nets.
+
+27
+00:01:57.335 --> 00:02:02.505
+And then shortly after,
+I got recruited at UdeM back in Montreal,
+
+28
+00:02:02.505 --> 00:02:06.475
+where I had spent most
+of my adolescent years.
+
+29
+00:02:08.260 --> 00:02:12.948
+>> So as someone who's been there for
+the last several decades and seen it all,
+
+30
+00:02:12.948 --> 00:02:17.049
+certainly seen a lot of it,
+tell me a bit about how you're thinking
+
+31
+00:02:17.049 --> 00:02:21.610
+about deep learning, about neural
+networks has evolved over this time?
+
+32
+00:02:22.740 --> 00:02:25.590
+>> We start with experiments,
+with intuitions, and
+
+33
+00:02:25.590 --> 00:02:27.030
+theory sort of comes later.
+
+34
+00:02:27.030 --> 00:02:30.540
+We now understand a lot better,
+for example,
+
+35
+00:02:30.540 --> 00:02:35.132
+why Backdrop is working so well,
+why depth is so important.
+
+36
+00:02:35.132 --> 00:02:41.904
+And these kinds of notions, we didn't have
+any solid justification for in those days.
+
+37
+00:02:41.904 --> 00:02:46.488
+When we started working on deep nets in
+the early 2000s, we had the intuition that
+
+38
+00:02:46.488 --> 00:02:50.680
+it made a lot of sense that a deeper
+network should be more powerful.
+
+39
+00:02:50.680 --> 00:02:54.450
+But we didn't know how to take that and
+
+40
+00:02:54.450 --> 00:02:57.680
+prove it, and of course,
+our experiments, initially, didn't work.
+
+41
+00:02:59.260 --> 00:02:59.910
+>> And actually,
+
+42
+00:02:59.910 --> 00:03:04.580
+what were the most important things
+that you think turned out to be right?
+
+43
+00:03:04.580 --> 00:03:08.120
+And what were the biggest surprises
+of what turned out to be wrong,
+
+44
+00:03:08.120 --> 00:03:09.680
+compared to what we knew 30 years ago?
+
+45
+00:03:11.070 --> 00:03:15.880
+>> Sure, so one of the biggest
+mistakes I made was to think,
+
+46
+00:03:15.880 --> 00:03:18.686
+like everyone else in the 90s,
+
+47
+00:03:18.686 --> 00:03:24.980
+that you needed smooth nonlinearities
+in order for Backdrop to work.
+
+48
+00:03:24.980 --> 00:03:31.330
+because I thought that if we had
+something like rectifying nonlinearities,
+
+49
+00:03:31.330 --> 00:03:35.010
+where you have a flat part,
+that it would be really hard to train,
+
+50
+00:03:35.010 --> 00:03:38.090
+because the derivative would be zero in so
+many places.
+
+51
+00:03:38.090 --> 00:03:41.981
+And when we started
+experimenting with ReLU,
+
+52
+00:03:41.981 --> 00:03:48.065
+with deep nets around 2010,
+I was obsessed with the idea that,
+
+53
+00:03:48.065 --> 00:03:55.270
+we should be careful about whether neurons
+won't saturate too much on the zero part.
+
+54
+00:03:55.270 --> 00:03:59.679
+But in the end, it turned out that,
+actually, the ReLU was working a lot
+
+55
+00:03:59.679 --> 00:04:03.751
+better than the sigmoids and attach,
+and that was a big surprise.
+
+56
+00:04:03.751 --> 00:04:07.969
+We did this, exploring this because of
+the biological connection, actually,
+
+57
+00:04:07.969 --> 00:04:11.105
+not because we thought that it
+would be easier to optimize.
+
+58
+00:04:11.105 --> 00:04:16.300
+But it turned out to work better, whereas
+I thought it would be harder to train.
+
+59
+00:04:16.300 --> 00:04:17.490
+>> So let me ask you,
+
+60
+00:04:17.490 --> 00:04:20.890
+what is the relationship between
+deep learning and the brain?
+
+61
+00:04:20.890 --> 00:04:25.491
+There's the obvious answer, but
+I'm curious what's your answer to that?
+
+62
+00:04:25.491 --> 00:04:31.093
+>> Well, the initial insight
+that really got me excited with
+
+63
+00:04:31.093 --> 00:04:37.839
+neural nets was this idea from
+the connectionists that information is
+
+64
+00:04:37.839 --> 00:04:43.003
+distributed across
+the activation of many neurons.
+
+65
+00:04:43.003 --> 00:04:47.431
+Rather than being represented
+by sort of the grandmother cell,
+
+66
+00:04:47.431 --> 00:04:51.209
+as they were calling it,
+a symbolic representation.
+
+67
+00:04:51.209 --> 00:04:54.972
+That was the traditional
+view in classical AI.
+
+68
+00:04:54.972 --> 00:04:58.860
+And I still believe this is
+a really important thing, and
+
+69
+00:04:58.860 --> 00:05:03.573
+I see people rediscovering
+the importance of that, even recently.
+
+70
+00:05:03.573 --> 00:05:06.850
+So that was really a foundation.
+
+71
+00:05:06.850 --> 00:05:12.919
+The depth thing is something that
+came later, in the early 2000s,
+
+72
+00:05:12.919 --> 00:05:16.563
+but it wasn't something I was thinking
+about in the 90s, for example.
+
+73
+00:05:16.563 --> 00:05:21.318
+>> Right, right, and I remember you
+built a lot of relatively shallow, but
+
+74
+00:05:21.318 --> 00:05:26.859
+very distributed representations for
+the word embeddings, right, very early on.
+
+75
+00:05:26.859 --> 00:05:28.897
+>> Right, that's right, yeah,
+
+76
+00:05:28.897 --> 00:05:33.661
+that's one of the things that I got
+really excited about in the late 90s.
+
+77
+00:05:33.661 --> 00:05:38.351
+Actually, my brother, Samy, and I worked
+on the idea that we could use neural nets
+
+78
+00:05:38.351 --> 00:05:42.171
+to tackle the curse of dimensionality,
+which was believed to be one
+
+79
+00:05:42.171 --> 00:05:45.980
+of the central issues with
+the statistical learning.
+
+80
+00:05:45.980 --> 00:05:51.440
+And that fact that we could have these
+distributed presentations could be used
+
+81
+00:05:51.440 --> 00:05:57.150
+to represent joint distributions over many
+random variables in a very efficient way.
+
+82
+00:05:57.150 --> 00:06:01.250
+And it turned out to work quite well,
+and then I extended this to joint
+
+83
+00:06:01.250 --> 00:06:04.920
+distributions over sequences of words, and
+this is how the word embeddings were born.
+
+84
+00:06:04.920 --> 00:06:10.525
+Because I thought,
+this will allow generalization
+
+85
+00:06:10.525 --> 00:06:16.373
+across words that have similar
+semantic meaning and so on.
+
+86
+00:06:16.373 --> 00:06:20.974
+>> So over the last couple decades, your
+research group has invented more ideas
+
+87
+00:06:20.974 --> 00:06:24.030
+than anyone can summarize
+in a few minutes.
+
+88
+00:06:24.030 --> 00:06:26.879
+So I'm curious, what are the inventions or
+
+89
+00:06:26.879 --> 00:06:29.810
+ideas you're most proud
+of from your group?
+
+90
+00:06:29.810 --> 00:06:35.640
+>> Right, so I think I mentioned long-term
+dependencies, the study of that.
+
+91
+00:06:35.640 --> 00:06:40.770
+I think people still don't
+understand it well enough.
+
+92
+00:06:40.770 --> 00:06:45.214
+Then there's the story I mentioned
+about curse of dimensionality,
+
+93
+00:06:45.214 --> 00:06:49.887
+joint distributions with neural nets,
+which became, more recently,
+
+94
+00:06:49.887 --> 00:06:52.435
+the that Hugo Larochelle did.
+
+95
+00:06:52.435 --> 00:06:55.255
+And then, as I said,
+that gave rise to all sort of work
+
+96
+00:06:55.255 --> 00:06:59.660
+on learning word embeddings for
+joint distributions for words.
+
+97
+00:06:59.660 --> 00:07:04.410
+Then came, I think, probably the best
+known events of the work we did with
+
+98
+00:07:04.410 --> 00:07:07.639
+deep learning, with stacks of
+auto encoders and stacks of RBMs.
+
+99
+00:07:09.580 --> 00:07:15.500
+One thing then, it was the work on
+understanding better the difficulties
+
+100
+00:07:15.500 --> 00:07:20.530
+of training deep nets with
+with the initialization ideas,
+
+101
+00:07:20.530 --> 00:07:24.840
+and also,
+the vanishing gradient in deep nets.
+
+102
+00:07:24.840 --> 00:07:29.440
+And that work actually was the one which
+gave rise to the experiments showing
+
+103
+00:07:29.440 --> 00:07:34.986
+the importance of piecewise
+linear activation functions.
+
+104
+00:07:34.986 --> 00:07:38.804
+Then I would say some of the most
+important work regards the work
+
+105
+00:07:38.804 --> 00:07:43.706
+we did with unsupervised learning,
+the denoising auto-encoders, the GANs,
+
+106
+00:07:43.706 --> 00:07:48.340
+which are very popular these days,
+the generative adversarial networks.
+
+107
+00:07:48.340 --> 00:07:54.563
+The work we did with neural machine
+translation using attention,
+
+108
+00:07:54.563 --> 00:08:01.132
+which turned out to be really
+important for making translation work.
+
+109
+00:08:01.132 --> 00:08:05.540
+And it's currently used in industrial
+systems, like Google Translate.
+
+110
+00:08:05.540 --> 00:08:09.800
+But this attention thing actually
+really changed my views on neural nets.
+
+111
+00:08:09.800 --> 00:08:14.860
+Neural nets we used to think as machines
+that can map a vector to a vector.
+
+112
+00:08:14.860 --> 00:08:19.300
+But really with attention mechanisms, you
+can now handle any kind of data structure.
+
+113
+00:08:19.300 --> 00:08:24.565
+And this is really opening up
+a lot of interesting avenues.
+
+114
+00:08:24.565 --> 00:08:27.415
+Direction of actually
+connecting to biology,
+
+115
+00:08:27.415 --> 00:08:31.403
+one thing that I've been working
+on in the last couple of years is,
+
+116
+00:08:31.403 --> 00:08:36.970
+how could we come up with something like
+backprop but that brains could implement.
+
+117
+00:08:36.970 --> 00:08:41.500
+And we have a few papers in that direction
+that seems to be interesting for
+
+118
+00:08:41.500 --> 00:08:43.930
+the neuroscience people.
+
+119
+00:08:43.930 --> 00:08:46.240
+And then we're continuing in
+that direction of course.
+
+120
+00:08:47.890 --> 00:08:50.785
+>> One of the topics that I know
+you've been thinking a lot about is
+
+121
+00:08:50.785 --> 00:08:52.990
+the relationship between deep learning and
+
+122
+00:08:52.990 --> 00:08:56.720
+the brain,
+can you tell us a bit more about that?
+
+123
+00:08:56.720 --> 00:09:03.030
+>> The biological thing is something I've
+been thinking about for a while actually
+
+124
+00:09:03.030 --> 00:09:08.110
+and having a lot of,
+I would say daydreaming about.
+
+125
+00:09:08.110 --> 00:09:12.897
+Because I think of it like a puzzle.
+
+126
+00:09:12.897 --> 00:09:16.957
+So we have these pieces of evidence
+from what we know from the brain and
+
+127
+00:09:16.957 --> 00:09:21.042
+from learning in the brain like
+spike timing dependent plasticity.
+
+128
+00:09:21.042 --> 00:09:27.490
+And on the other hand, we have all of
+these concepts from machine learning.
+
+129
+00:09:27.490 --> 00:09:31.822
+The idea of globally training
+the whole system with respect to
+
+130
+00:09:31.822 --> 00:09:35.440
+an objective function,
+and the idea of backprop.
+
+131
+00:09:35.440 --> 00:09:37.370
+And what does backprop mean?
+
+132
+00:09:37.370 --> 00:09:42.710
+Like, what does credit
+assignment really mean?
+
+133
+00:09:42.710 --> 00:09:47.515
+When I started thinking about how brains
+could do something like backprop,
+
+134
+00:09:47.515 --> 00:09:53.070
+it prompted me to think about, well, maybe
+there's some more general concepts behind
+
+135
+00:09:53.070 --> 00:09:58.271
+backprop which make it so efficient which
+allow us to be efficient with backprop.
+
+136
+00:09:58.271 --> 00:10:02.217
+And maybe there's a larger family of
+ways to do credit assignment, and
+
+137
+00:10:02.217 --> 00:10:06.973
+that connects to questions that people in
+reinforcement learning have been asking.
+
+138
+00:10:06.973 --> 00:10:12.161
+So it's interesting how sometimes
+asking a simple question leads
+
+139
+00:10:12.161 --> 00:10:18.366
+you to thinking about so many different
+things, and forces you to think about so
+
+140
+00:10:18.366 --> 00:10:23.387
+many elements that you like to
+bring together like a big puzzle.
+
+141
+00:10:23.387 --> 00:10:26.510
+So this has gone for a number of years.
+
+142
+00:10:26.510 --> 00:10:30.538
+And I need to say that this whole
+endeavor, like many of the ones that I
+
+143
+00:10:30.538 --> 00:10:34.714
+have followed, has been highly
+inspired by Jeff Hinton's thoughts.
+
+144
+00:10:34.714 --> 00:10:41.171
+So in particular,
+he gave this talk in 2007 I think,
+
+145
+00:10:41.171 --> 00:10:46.013
+the first deep learning
+workshop on what he
+
+146
+00:10:46.013 --> 00:10:51.270
+thought was the way that
+the brain is working.
+
+147
+00:10:52.840 --> 00:10:56.515
+How kind of temporal
+code could be used for
+
+148
+00:10:56.515 --> 00:11:00.719
+potentially doing some
+of the job of backprop.
+
+149
+00:11:00.719 --> 00:11:06.700
+And that led to a lot of the ideas that
+I've explored in recent years with this.
+
+150
+00:11:07.850 --> 00:11:12.700
+Yeah, so it's kind of
+an interesting story that has been
+
+151
+00:11:13.830 --> 00:11:16.090
+running for a decade now, basically.
+
+152
+00:11:17.100 --> 00:11:21.030
+>> One of the topics I've heard you
+speak about multiple times as well is
+
+153
+00:11:21.030 --> 00:11:23.090
+unsupervised learning.
+
+154
+00:11:23.090 --> 00:11:25.000
+Can you share your perspective on that?
+
+155
+00:11:26.010 --> 00:11:29.880
+>> Yes, yes, so
+unsupervised learning is really important.
+
+156
+00:11:29.880 --> 00:11:34.744
+Right now, our industrial systems
+are based on supervised learning,
+
+157
+00:11:34.744 --> 00:11:40.259
+which essentially requires humans to
+define what the important concepts are for
+
+158
+00:11:40.259 --> 00:11:43.845
+the problem and
+to label those concepts in the data.
+
+159
+00:11:43.845 --> 00:11:49.740
+And we build all these amazing toys and
+services and systems using this.
+
+160
+00:11:49.740 --> 00:11:52.397
+But humans are able to do much more.
+
+161
+00:11:52.397 --> 00:11:57.869
+They are able to explore and
+discover new concepts by observation and
+
+162
+00:11:57.869 --> 00:12:00.360
+interaction with the world.
+
+163
+00:12:00.360 --> 00:12:05.362
+A two year old is able to
+understand intuitive physics.
+
+164
+00:12:05.362 --> 00:12:08.490
+In other words, she understands gravity,
+she understands pressure,
+
+165
+00:12:08.490 --> 00:12:11.990
+she understands inertia.
+
+166
+00:12:11.990 --> 00:12:14.480
+She understands liquid, solids.
+
+167
+00:12:14.480 --> 00:12:18.140
+And of course, her parents never told
+her about any of this stuff, right?
+
+168
+00:12:18.140 --> 00:12:21.110
+So how did she figure it out?
+
+169
+00:12:21.110 --> 00:12:26.160
+So that's the kind of question that
+unsupervised learning is trying to answer.
+
+170
+00:12:26.160 --> 00:12:30.460
+It's not just about we have labels or
+we don't have labels.
+
+171
+00:12:30.460 --> 00:12:33.790
+It's about actually building a mental
+
+172
+00:12:33.790 --> 00:12:38.630
+construction that explains how
+the world works by observation.
+
+173
+00:12:38.630 --> 00:12:42.430
+And more recently, I've been combining
+
+174
+00:12:42.430 --> 00:12:45.810
+the ideas in unsupervised learning with
+the ideas in reinforcement learning.
+
+175
+00:12:45.810 --> 00:12:50.430
+Because I believe that there
+is a very strong indication
+
+176
+00:12:50.430 --> 00:12:54.899
+about the important underlying concepts
+that we're trying to disentangle,
+
+177
+00:12:54.899 --> 00:12:57.020
+we're trying to separate from each other.
+
+178
+00:12:58.150 --> 00:13:03.166
+That a human or machine can get
+by interacting with the world,
+
+179
+00:13:03.166 --> 00:13:08.969
+by exploring the world and trying
+things and trying to control things.
+
+180
+00:13:08.969 --> 00:13:13.598
+So these are I think tightly coupled
+to the original ideas of unsupervised
+
+181
+00:13:13.598 --> 00:13:14.354
+learning.
+
+182
+00:13:14.354 --> 00:13:17.082
+So my take on unsupervised learning,
+
+183
+00:13:17.082 --> 00:13:22.027
+15 years ago when we started
+doing the the and the RBMs and so
+
+184
+00:13:22.027 --> 00:13:26.819
+on was very focused on the idea
+of learning good representations.
+
+185
+00:13:26.819 --> 00:13:29.350
+And I still think this is
+an essential question.
+
+186
+00:13:29.350 --> 00:13:34.370
+But the thing we don't know is how and
+what is a good representation?
+
+187
+00:13:34.370 --> 00:13:39.569
+How do we figure out an objective
+function, for example?
+
+188
+00:13:39.569 --> 00:13:41.945
+So we've tried many things over the years.
+
+189
+00:13:41.945 --> 00:13:46.262
+And that's actually one of the cool things
+about unsupervised learning research,
+
+190
+00:13:46.262 --> 00:13:48.449
+that there are so many different ideas, so
+
+191
+00:13:48.449 --> 00:13:51.079
+different ways that this
+problem can be attacked.
+
+192
+00:13:51.079 --> 00:13:56.482
+And that's just, maybe there's another one
+we'll discover next year that's completely
+
+193
+00:13:56.482 --> 00:14:01.066
+different and maybe the brain is using
+something else completely different.
+
+194
+00:14:01.066 --> 00:14:03.197
+So it's not incremental research,
+
+195
+00:14:03.197 --> 00:14:06.300
+it's something that in
+itself is very exploratory.
+
+196
+00:14:07.500 --> 00:14:11.150
+We don't have a good definition of what's
+the right objective function to even
+
+197
+00:14:11.150 --> 00:14:14.446
+measure that a system is doing
+a good job on unsupervised learning.
+
+198
+00:14:14.446 --> 00:14:19.710
+So of course, it's challenging,
+but at the same time,
+
+199
+00:14:19.710 --> 00:14:23.140
+it leaves open a wide
+field of possibilities,
+
+200
+00:14:23.140 --> 00:14:26.980
+which is what researchers really love, at
+least that's something that appeals to me.
+
+201
+00:14:28.600 --> 00:14:31.536
+>> So today, there's so
+much going on in deep learning.
+
+202
+00:14:31.536 --> 00:14:34.175
+And I think we've passed
+the point where it's possible for
+
+203
+00:14:34.175 --> 00:14:37.410
+any one human to read every single
+deep learning paper being published.
+
+204
+00:14:38.590 --> 00:14:44.397
+So I'm curious, what in deep
+learning today excites you the most?
+
+205
+00:14:44.397 --> 00:14:49.059
+>> So I'm very ambitious, and
+I feel like the current state of
+
+206
+00:14:49.059 --> 00:14:54.780
+the science of deep learning is
+far from where I'd like to see it.
+
+207
+00:14:54.780 --> 00:15:01.060
+And I have the impression that our systems
+right now make the kind of mistakes
+
+208
+00:15:01.060 --> 00:15:05.480
+that suggest they have a very
+superficial understanding of the world.
+
+209
+00:15:06.510 --> 00:15:11.504
+So what excites me the most now is sort
+of direction of research where we're not
+
+210
+00:15:11.504 --> 00:15:15.527
+trying to build systems that
+are going to do something useful.
+
+211
+00:15:15.527 --> 00:15:21.494
+We're just going back to principles about,
+how can a computer observe the world,
+
+212
+00:15:21.494 --> 00:15:26.030
+interact with the world, and
+discover how that world works?
+
+213
+00:15:26.030 --> 00:15:30.348
+Even if that world is simple, something
+that we can program as a kind of video
+
+214
+00:15:30.348 --> 00:15:32.718
+game, we don't know how to do that well.
+
+215
+00:15:32.718 --> 00:15:36.655
+And that's cool, because I don't have to
+compete with Google, and Facebook, and
+
+216
+00:15:36.655 --> 00:15:38.400
+Baidu, and so on, right?
+
+217
+00:15:38.400 --> 00:15:41.300
+Because this is a kind of basic
+
+218
+00:15:41.300 --> 00:15:45.640
+research that can be done by anyone in
+their garage and could change the world.
+
+219
+00:15:45.640 --> 00:15:50.130
+So there are many, of course,
+many directions to attack this.
+
+220
+00:15:50.130 --> 00:15:54.509
+But I see a lot of the fruitful
+interactions between ideas in deep
+
+221
+00:15:54.509 --> 00:15:59.311
+learning and reinforcement learning
+being really important there.
+
+222
+00:15:59.311 --> 00:16:03.076
+And I'm really excited that
+the progress in this direction
+
+223
+00:16:03.076 --> 00:16:06.940
+Could have a huge impact on
+practical applications actually.
+
+224
+00:16:06.940 --> 00:16:11.774
+Because if you look at some of the big
+challenges that we have in applications,
+
+225
+00:16:11.774 --> 00:16:14.044
+like how we deal with new domains, or
+
+226
+00:16:14.044 --> 00:16:16.921
+categories on which we
+have too few examples.
+
+227
+00:16:16.921 --> 00:16:21.100
+And in cases where humans are very
+good at solving those problems.
+
+228
+00:16:21.100 --> 00:16:25.336
+So these transfer learning and
+dramatization issues,
+
+229
+00:16:25.336 --> 00:16:30.201
+they would become much easier to
+tackle if we had systems that had
+
+230
+00:16:30.201 --> 00:16:33.821
+a better understanding
+of how the world works.
+
+231
+00:16:33.821 --> 00:16:35.280
+A deeper understanding, right?
+
+232
+00:16:35.280 --> 00:16:36.215
+What is actually going on?
+
+233
+00:16:36.215 --> 00:16:40.218
+What are the causes of what I'm seeing?
+
+234
+00:16:40.218 --> 00:16:44.170
+And how could I influence what
+I'm seeing by my actions?
+
+235
+00:16:44.170 --> 00:16:50.542
+So these are the kinds of questions
+I'm really excited about these days.
+
+236
+00:16:50.542 --> 00:16:56.029
+I think the connect, also the deep
+learning research that has evolved
+
+237
+00:16:56.029 --> 00:17:01.060
+over the last couple of decades
+with even older questions in AI.
+
+238
+00:17:01.060 --> 00:17:07.760
+Because a lot of the success in deep
+learning has been with perception.
+
+239
+00:17:07.760 --> 00:17:08.917
+So what's left, right?
+
+240
+00:17:08.917 --> 00:17:11.305
+What's left is sort of
+high level condition,
+
+241
+00:17:11.305 --> 00:17:14.890
+which is about understanding at
+an abstract level how things work.
+
+242
+00:17:14.890 --> 00:17:19.093
+So we are program of understanding high
+level abstractions I think has not
+
+243
+00:17:19.093 --> 00:17:23.109
+reached those high levels of abstractions
+and so we have to get there.
+
+244
+00:17:23.109 --> 00:17:28.796
+We have to think about reasoning, about
+sequential processing of information.
+
+245
+00:17:28.796 --> 00:17:31.087
+We have to think of how
+causality works and
+
+246
+00:17:31.087 --> 00:17:34.540
+how machines can discover all
+these things by themselves.
+
+247
+00:17:34.540 --> 00:17:39.555
+Potentially guided by humans, but
+as much as possible in an autonomous way.
+
+248
+00:17:39.555 --> 00:17:42.395
+>> And it sounds like from
+part of what you said that
+
+249
+00:17:42.395 --> 00:17:46.160
+you're a fan of research approaches
+where you experiment on,
+
+250
+00:17:46.160 --> 00:17:49.730
+I'm going to use term toy problem,
+not in a disparaging way.
+
+251
+00:17:49.730 --> 00:17:51.354
+>> Right.
+>> But on the small problem.
+
+252
+00:17:51.354 --> 00:17:55.670
+And you're optimistic that that
+transfers to bigger problems later.
+
+253
+00:17:55.670 --> 00:18:00.634
+>> Yes, yes, it transfers in a way.
+
+254
+00:18:00.634 --> 00:18:05.223
+Of course we're going to have
+to do some work to scale up and
+
+255
+00:18:05.223 --> 00:18:08.170
+address those problems.
+
+256
+00:18:08.170 --> 00:18:11.295
+But my main motivation for going for
+
+257
+00:18:11.295 --> 00:18:17.233
+those toy problems is that we can
+understand better our failures and
+
+258
+00:18:17.233 --> 00:18:22.233
+we can reduce the problem to
+something we can intuitively
+
+259
+00:18:22.233 --> 00:18:26.528
+sort of manipulate and
+understand more easily.
+
+260
+00:18:26.528 --> 00:18:31.031
+So sort of a classical divide and
+conquer science approach.
+
+261
+00:18:31.031 --> 00:18:35.591
+And also, I think, something people
+don't think about it enough is
+
+262
+00:18:35.591 --> 00:18:38.750
+the research cycle can be much faster,
+right?
+
+263
+00:18:38.750 --> 00:18:44.225
+So if I can do an experiment in a few
+hours, I can progress much faster.
+
+264
+00:18:44.225 --> 00:18:49.448
+If I have to try out a huge model that
+tries to capture the whole common
+
+265
+00:18:49.448 --> 00:18:55.511
+sense and everything in the general
+knowledge, which eventually we'll do.
+
+266
+00:18:55.511 --> 00:18:59.010
+It's just each experiment just takes
+too much time with current hardware.
+
+267
+00:18:59.010 --> 00:19:02.984
+So while our hardware friends are building
+machines that are going to be a thousand
+
+268
+00:19:02.984 --> 00:19:06.050
+or a million times faster,
+I'm doing those toy experiments.
+
+269
+00:19:06.050 --> 00:19:11.094
+[LAUGH]
+>> You know, I've also heard you speak
+
+270
+00:19:11.094 --> 00:19:15.904
+about the science of deep learning,
+not just as an engineering discipline,
+
+271
+00:19:15.904 --> 00:19:19.610
+but doing more work to understand
+what's really going on.
+
+272
+00:19:19.610 --> 00:19:22.185
+Do you want to share
+your thoughts on that?
+
+273
+00:19:22.185 --> 00:19:24.287
+>> Yeah, absolutely.
+
+274
+00:19:24.287 --> 00:19:29.105
+I fear that a lot of the work that we're
+doing is sort of like blind people trying
+
+275
+00:19:29.105 --> 00:19:30.278
+to find their way.
+
+276
+00:19:30.278 --> 00:19:37.247
+[LAUGH] And you can get a lot of luck and
+find interesting things that way.
+
+277
+00:19:37.247 --> 00:19:40.487
+But really if we sort of
+stop a little bit and
+
+278
+00:19:40.487 --> 00:19:45.619
+try to understand what we're doing
+in a way that's transferable,
+
+279
+00:19:45.619 --> 00:19:49.220
+because we go down to
+principles to theory, but
+
+280
+00:19:49.220 --> 00:19:53.378
+when I say theory I don't mean,
+necessarily, math.
+
+281
+00:19:53.378 --> 00:19:57.733
+Of course I like math and so on, but
+I don't think that we need that everything
+
+282
+00:19:57.733 --> 00:20:01.221
+be formalized mathematically but
+be formalized logically.
+
+283
+00:20:01.221 --> 00:20:05.567
+In the sense that I can convince
+somebody that this should work,
+
+284
+00:20:05.567 --> 00:20:07.348
+whether this make sense.
+
+285
+00:20:07.348 --> 00:20:09.550
+This is the most important aspect.
+
+286
+00:20:09.550 --> 00:20:14.650
+And then math allows us to make
+that stronger and tighter.
+
+287
+00:20:14.650 --> 00:20:17.330
+But really it's more about understanding.
+
+288
+00:20:17.330 --> 00:20:21.145
+And it's about also doing our research,
+
+289
+00:20:21.145 --> 00:20:25.396
+not to be the next baseline,
+or benchmark, or
+
+290
+00:20:25.396 --> 00:20:30.850
+beat the other guys in the other lab,
+or the other company.
+
+291
+00:20:30.850 --> 00:20:35.148
+It's more about what kind of question
+should we ask that would allow us to
+
+292
+00:20:35.148 --> 00:20:38.200
+understand better
+the phenomena of interest.
+
+293
+00:20:38.200 --> 00:20:40.330
+What makes, for example,
+
+294
+00:20:40.330 --> 00:20:45.247
+training in deeper networks harder,
+or current nets harder?
+
+295
+00:20:45.247 --> 00:20:48.110
+We have some ideas, but
+a lot of things we don't understand yet.
+
+296
+00:20:49.310 --> 00:20:54.624
+So we can maybe design experiments whose
+goal is not to have a better algorithm,
+
+297
+00:20:54.624 --> 00:20:58.987
+but just to understand better
+the algorithms we currently have or
+
+298
+00:20:58.987 --> 00:21:03.857
+what circumstances make the particular
+algorithm work better and why.
+
+299
+00:21:03.857 --> 00:21:05.346
+It's the why that really matters.
+
+300
+00:21:05.346 --> 00:21:06.595
+That's what's science is about.
+
+301
+00:21:06.595 --> 00:21:07.669
+It's why.
+
+302
+00:21:07.669 --> 00:21:09.826
+>> Right.
+Today there are a lot of people that want
+
+303
+00:21:09.826 --> 00:21:10.764
+to enter the field.
+
+304
+00:21:10.764 --> 00:21:14.496
+And I'm sure you've answered this
+a lot in one-on-one settings, but
+
+305
+00:21:14.496 --> 00:21:18.288
+with all the people watching this on
+video, what advice would you have for
+
+306
+00:21:18.288 --> 00:21:21.238
+people that want to get into AI,
+get into deep learning?
+
+307
+00:21:21.238 --> 00:21:26.160
+>> Right, so first of all,
+there are different motivations and
+
+308
+00:21:26.160 --> 00:21:28.537
+different things you can do.
+
+309
+00:21:28.537 --> 00:21:33.064
+What you need to become a deep learning
+researcher may not be the same as if you
+
+310
+00:21:33.064 --> 00:21:37.333
+want to be an engineer who's going to
+use deep learning to build products.
+
+311
+00:21:37.333 --> 00:21:40.844
+There's a different level of understanding
+that's needed in both cases.
+
+312
+00:21:40.844 --> 00:21:46.090
+But in any case in both cases, practice.
+
+313
+00:21:46.090 --> 00:21:51.004
+So to really master a subject
+like deep learning,
+
+314
+00:21:51.004 --> 00:21:54.166
+of course you have to read a lot.
+
+315
+00:21:54.166 --> 00:21:56.899
+You have to practice programming
+the things yourself.
+
+316
+00:21:58.450 --> 00:22:02.516
+Very often I interview students
+who have used software.
+
+317
+00:22:02.516 --> 00:22:06.788
+And these days there's so many good
+software around that you can just plug and
+
+318
+00:22:06.788 --> 00:22:09.690
+play and
+understand nothing of what you're doing.
+
+319
+00:22:09.690 --> 00:22:12.890
+Or at such as a superficial level
+that then it becomes hard to
+
+320
+00:22:12.890 --> 00:22:16.027
+figure out when it doesn't work and
+what's going wrong.
+
+321
+00:22:16.027 --> 00:22:19.880
+So actually trying to implement things
+yourself, even if it's inefficient.
+
+322
+00:22:19.880 --> 00:22:24.366
+But just to make sure you really
+understand what is going on is really
+
+323
+00:22:24.366 --> 00:22:26.972
+useful, and trying things yourself.
+
+324
+00:22:26.972 --> 00:22:29.886
+>> So don't just use one of the
+programming frameworks where you can do
+
+325
+00:22:29.886 --> 00:22:33.432
+everything in a few lines of code, but
+you don't really know what just happened.
+
+326
+00:22:33.432 --> 00:22:37.480
+>> Exactly, exactly, and
+I would say even more than that.
+
+327
+00:22:37.480 --> 00:22:42.911
+Trying to derive the thing yourself
+from first principles, if you can.
+
+328
+00:22:42.911 --> 00:22:44.597
+That really helps.
+
+329
+00:22:44.597 --> 00:22:48.275
+But yeah, the usual things
+you have to do like reading,
+
+330
+00:22:48.275 --> 00:22:52.110
+looking at other people's code,
+writing your own code,
+
+331
+00:22:52.110 --> 00:22:57.066
+doing lots of experiment, making sure
+you understand everything you do.
+
+332
+00:22:57.066 --> 00:23:00.621
+So especially for the science part of it,
+
+333
+00:23:00.621 --> 00:23:05.810
+trying to ask why am I doing this,
+why are people doing this?
+
+334
+00:23:05.810 --> 00:23:10.470
+Maybe the answer is somewhere in
+the book and you have to read more.
+
+335
+00:23:11.490 --> 00:23:14.340
+But it's even better if you can
+actually figure it out by yourself.
+
+336
+00:23:15.580 --> 00:23:16.992
+Yeah, cool, yeah.
+
+337
+00:23:16.992 --> 00:23:21.547
+And in fact, of the things I read,
+you and Ian [INAUDIBLE] and
+
+338
+00:23:21.547 --> 00:23:25.207
+Aaron [INAUDIBLE] wrote
+a highly regarded book.
+
+339
+00:23:25.207 --> 00:23:27.240
+>> Thank you, thank you.
+
+340
+00:23:27.240 --> 00:23:28.607
+Yes, it's selling a lot.
+
+341
+00:23:28.607 --> 00:23:30.206
+It's a bit crazy.
+
+342
+00:23:30.206 --> 00:23:35.027
+I feel like there is more people
+reading this book than people who can
+
+343
+00:23:35.027 --> 00:23:36.816
+read it [LAUGH] right now.
+
+344
+00:23:36.816 --> 00:23:40.188
+But yeah, also proceedings of the ICLR I
+
+345
+00:23:40.188 --> 00:23:44.968
+conference is probably the best
+concentrated place of good papers.
+
+346
+00:23:44.968 --> 00:23:49.145
+Of course there are really good papers
+at NIPS and ICML and other conferences.
+
+347
+00:23:49.145 --> 00:23:54.345
+But if you really want to go for a lot
+of good papers, just read the last few
+
+348
+00:23:54.345 --> 00:23:59.648
+ICLR proceedings, and that will give
+you really good view of the field.
+
+349
+00:23:59.648 --> 00:24:01.454
+>> Cool, yeah.
+
+350
+00:24:01.454 --> 00:24:02.940
+Any other thoughts?
+
+351
+00:24:02.940 --> 00:24:09.337
+When people ask you for advice, how does
+someone become good at deep learning?
+
+352
+00:24:09.337 --> 00:24:14.949
+>> Well,
+it depends on where you come from.
+
+353
+00:24:14.949 --> 00:24:17.590
+Don't be afraid by the math.
+
+354
+00:24:17.590 --> 00:24:22.557
+Just develop the intuitions, and
+then the math become really easier to
+
+355
+00:24:22.557 --> 00:24:27.870
+understand once you get the hang of
+what's going on at the intuitive level.
+
+356
+00:24:27.870 --> 00:24:32.218
+And one good news is that you don't
+need five years of PhD to become
+
+357
+00:24:32.218 --> 00:24:34.300
+proficient at deep learning.
+
+358
+00:24:34.300 --> 00:24:35.637
+You can actually learn pretty quickly.
+
+359
+00:24:35.637 --> 00:24:40.040
+If you have a good background
+in computer science and
+
+360
+00:24:40.040 --> 00:24:44.742
+math, you can learn enough to use it and
+build things and
+
+361
+00:24:44.742 --> 00:24:48.962
+start research experiments
+in just a few months.
+
+362
+00:24:48.962 --> 00:24:53.312
+Something like six months for
+people with the right training.
+
+363
+00:24:53.312 --> 00:24:56.224
+Maybe they don't know anything
+about machine learning, but
+
+364
+00:24:56.224 --> 00:24:59.427
+if they're good at math and
+computer science, it can be very fast.
+
+365
+00:24:59.427 --> 00:25:02.722
+And of course, so that means you need
+to have the right training in math and
+
+366
+00:25:02.722 --> 00:25:03.640
+computer science.
+
+367
+00:25:03.640 --> 00:25:08.920
+Sometimes what you learn in just
+computer science courses is not enough.
+
+368
+00:25:08.920 --> 00:25:13.928
+You need some continuous math, especially.
+
+369
+00:25:13.928 --> 00:25:20.309
+So this is probability, algebra and
+optimization, for example.
+
+370
+00:25:20.309 --> 00:25:22.313
+>> I see.
+And calculus.
+
+371
+00:25:22.313 --> 00:25:24.037
+>> And calculus, yeah.
+
+372
+00:25:24.037 --> 00:25:28.809
+>> Thanks a lot, Joshua, for sharing all
+of the comments and insights and advice.
+
+373
+00:25:28.809 --> 00:25:32.561
+Even though I've known you for a long
+time, there are many details of your early
+
+374
+00:25:32.561 --> 00:25:35.084
+history that I didn't know until now,
+so thank you.
+
+375
+00:25:35.084 --> 00:25:39.880
+>> Well, thank you, Andrew, for doing this
+
+376
+00:25:39.880 --> 00:25:44.819
+special recording and what you're doing.
+
+377
+00:25:44.819 --> 00:25:47.150
+I hope it's going to be
+used by a lot of people.

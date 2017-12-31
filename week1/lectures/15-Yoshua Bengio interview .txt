@@ -1,0 +1,297 @@
+Hi, Yoshua, I'm really glad
+you could join us here today. >> I'm very glad, too. >> Today you're not just a researcher or
+engineer in deep learning. You've become one of the institutions and
+one of the icons of deep learning, but I'd really like to hear
+the story of how it started. So how did you end up getting into deep
+learning, and then pursuing this journey? >> Right, well, actually,
+it started when I was a kid, adolescent, reading a lot of science fiction,
+like, I guess, many of us. And when I started my graduate studies in
+1985, I started reading neural net papers, and that's where I got all excited,
+and it became really a passion. >> And actually, what was that like in,
+what, mid 80s, right, 1985, reading these papers, do you remember? >> Yeah. Well, coming from the courses I had taking
+in classical AI with expert systems, and suddenly discovering that there
+was all this world of thinking about how humans might be learning,
+and human intelligence. And how we might draw connections between
+that and artificial intelligence and computers. That was really exciting for
+me when I discovered this literature, and I started reading the connectionists,
+of course. So the papers from Geoff Hinton,
+[INAUDIBLE], and so on. And I worked on recurrent nets,
+I worked on speech recognition, I worked on HMNs, so graphical models. And then quickly, I moved to AT&T Bell
+Labs and MIT, where I did postdocs. And that's where I discovered some
+of the issues with the long-term dependencies with training neural nets. And then shortly after,
+I got recruited at UdeM back in Montreal, where I had spent most
+of my adolescent years. >> So as someone who's been there for
+the last several decades and seen it all, certainly seen a lot of it,
+tell me a bit about how you're thinking about deep learning, about neural
+networks has evolved over this time? >> We start with experiments,
+with intuitions, and theory sort of comes later. We now understand a lot better,
+for example, why Backdrop is working so well,
+why depth is so important. And these kinds of notions, we didn't have
+any solid justification for in those days. When we started working on deep nets in
+the early 2000s, we had the intuition that it made a lot of sense that a deeper
+network should be more powerful. But we didn't know how to take that and prove it, and of course,
+our experiments, initially, didn't work. >> And actually, what were the most important things
+that you think turned out to be right? And what were the biggest surprises
+of what turned out to be wrong, compared to what we knew 30 years ago? >> Sure, so one of the biggest
+mistakes I made was to think, like everyone else in the 90s, that you needed smooth nonlinearities
+in order for Backdrop to work. because I thought that if we had
+something like rectifying nonlinearities, where you have a flat part,
+that it would be really hard to train, because the derivative would be zero in so
+many places. And when we started
+experimenting with ReLU, with deep nets around 2010,
+I was obsessed with the idea that, we should be careful about whether neurons
+won't saturate too much on the zero part. But in the end, it turned out that,
+actually, the ReLU was working a lot better than the sigmoids and attach,
+and that was a big surprise. We did this, exploring this because of
+the biological connection, actually, not because we thought that it
+would be easier to optimize. But it turned out to work better, whereas
+I thought it would be harder to train. >> So let me ask you, what is the relationship between
+deep learning and the brain? There's the obvious answer, but
+I'm curious what's your answer to that? >> Well, the initial insight
+that really got me excited with neural nets was this idea from
+the connectionists that information is distributed across
+the activation of many neurons. Rather than being represented
+by sort of the grandmother cell, as they were calling it,
+a symbolic representation. That was the traditional
+view in classical AI. And I still believe this is
+a really important thing, and I see people rediscovering
+the importance of that, even recently. So that was really a foundation. The depth thing is something that
+came later, in the early 2000s, but it wasn't something I was thinking
+about in the 90s, for example. >> Right, right, and I remember you
+built a lot of relatively shallow, but very distributed representations for
+the word embeddings, right, very early on. >> Right, that's right, yeah, that's one of the things that I got
+really excited about in the late 90s. Actually, my brother, Samy, and I worked
+on the idea that we could use neural nets to tackle the curse of dimensionality,
+which was believed to be one of the central issues with
+the statistical learning. And that fact that we could have these
+distributed presentations could be used to represent joint distributions over many
+random variables in a very efficient way. And it turned out to work quite well,
+and then I extended this to joint distributions over sequences of words, and
+this is how the word embeddings were born. Because I thought,
+this will allow generalization across words that have similar
+semantic meaning and so on. >> So over the last couple decades, your
+research group has invented more ideas than anyone can summarize
+in a few minutes. So I'm curious, what are the inventions or ideas you're most proud
+of from your group? >> Right, so I think I mentioned long-term
+dependencies, the study of that. I think people still don't
+understand it well enough. Then there's the story I mentioned
+about curse of dimensionality, joint distributions with neural nets,
+which became, more recently, the that Hugo Larochelle did. And then, as I said,
+that gave rise to all sort of work on learning word embeddings for
+joint distributions for words. Then came, I think, probably the best
+known events of the work we did with deep learning, with stacks of
+auto encoders and stacks of RBMs. One thing then, it was the work on
+understanding better the difficulties of training deep nets with
+with the initialization ideas, and also,
+the vanishing gradient in deep nets. And that work actually was the one which
+gave rise to the experiments showing the importance of piecewise
+linear activation functions. Then I would say some of the most
+important work regards the work we did with unsupervised learning,
+the denoising auto-encoders, the GANs, which are very popular these days,
+the generative adversarial networks. The work we did with neural machine
+translation using attention, which turned out to be really
+important for making translation work. And it's currently used in industrial
+systems, like Google Translate. But this attention thing actually
+really changed my views on neural nets. Neural nets we used to think as machines
+that can map a vector to a vector. But really with attention mechanisms, you
+can now handle any kind of data structure. And this is really opening up
+a lot of interesting avenues. Direction of actually
+connecting to biology, one thing that I've been working
+on in the last couple of years is, how could we come up with something like
+backprop but that brains could implement. And we have a few papers in that direction
+that seems to be interesting for the neuroscience people. And then we're continuing in
+that direction of course. >> One of the topics that I know
+you've been thinking a lot about is the relationship between deep learning and the brain,
+can you tell us a bit more about that? >> The biological thing is something I've
+been thinking about for a while actually and having a lot of,
+I would say daydreaming about. Because I think of it like a puzzle. So we have these pieces of evidence
+from what we know from the brain and from learning in the brain like
+spike timing dependent plasticity. And on the other hand, we have all of
+these concepts from machine learning. The idea of globally training
+the whole system with respect to an objective function,
+and the idea of backprop. And what does backprop mean? Like, what does credit
+assignment really mean? When I started thinking about how brains
+could do something like backprop, it prompted me to think about, well, maybe
+there's some more general concepts behind backprop which make it so efficient which
+allow us to be efficient with backprop. And maybe there's a larger family of
+ways to do credit assignment, and that connects to questions that people in
+reinforcement learning have been asking. So it's interesting how sometimes
+asking a simple question leads you to thinking about so many different
+things, and forces you to think about so many elements that you like to
+bring together like a big puzzle. So this has gone for a number of years. And I need to say that this whole
+endeavor, like many of the ones that I have followed, has been highly
+inspired by Jeff Hinton's thoughts. So in particular,
+he gave this talk in 2007 I think, the first deep learning
+workshop on what he thought was the way that
+the brain is working. How kind of temporal
+code could be used for potentially doing some
+of the job of backprop. And that led to a lot of the ideas that
+I've explored in recent years with this. Yeah, so it's kind of
+an interesting story that has been running for a decade now, basically. >> One of the topics I've heard you
+speak about multiple times as well is unsupervised learning. Can you share your perspective on that? >> Yes, yes, so
+unsupervised learning is really important. Right now, our industrial systems
+are based on supervised learning, which essentially requires humans to
+define what the important concepts are for the problem and
+to label those concepts in the data. And we build all these amazing toys and
+services and systems using this. But humans are able to do much more. They are able to explore and
+discover new concepts by observation and interaction with the world. A two year old is able to
+understand intuitive physics. In other words, she understands gravity,
+she understands pressure, she understands inertia. She understands liquid, solids. And of course, her parents never told
+her about any of this stuff, right? So how did she figure it out? So that's the kind of question that
+unsupervised learning is trying to answer. It's not just about we have labels or
+we don't have labels. It's about actually building a mental construction that explains how
+the world works by observation. And more recently, I've been combining the ideas in unsupervised learning with
+the ideas in reinforcement learning. Because I believe that there
+is a very strong indication about the important underlying concepts
+that we're trying to disentangle, we're trying to separate from each other. That a human or machine can get
+by interacting with the world, by exploring the world and trying
+things and trying to control things. So these are I think tightly coupled
+to the original ideas of unsupervised learning. So my take on unsupervised learning, 15 years ago when we started
+doing the the and the RBMs and so on was very focused on the idea
+of learning good representations. And I still think this is
+an essential question. But the thing we don't know is how and
+what is a good representation? How do we figure out an objective
+function, for example? So we've tried many things over the years. And that's actually one of the cool things
+about unsupervised learning research, that there are so many different ideas, so different ways that this
+problem can be attacked. And that's just, maybe there's another one
+we'll discover next year that's completely different and maybe the brain is using
+something else completely different. So it's not incremental research, it's something that in
+itself is very exploratory. We don't have a good definition of what's
+the right objective function to even measure that a system is doing
+a good job on unsupervised learning. So of course, it's challenging,
+but at the same time, it leaves open a wide
+field of possibilities, which is what researchers really love, at
+least that's something that appeals to me. >> So today, there's so
+much going on in deep learning. And I think we've passed
+the point where it's possible for any one human to read every single
+deep learning paper being published. So I'm curious, what in deep
+learning today excites you the most? >> So I'm very ambitious, and
+I feel like the current state of the science of deep learning is
+far from where I'd like to see it. And I have the impression that our systems
+right now make the kind of mistakes that suggest they have a very
+superficial understanding of the world. So what excites me the most now is sort
+of direction of research where we're not trying to build systems that
+are going to do something useful. We're just going back to principles about,
+how can a computer observe the world, interact with the world, and
+discover how that world works? Even if that world is simple, something
+that we can program as a kind of video game, we don't know how to do that well. And that's cool, because I don't have to
+compete with Google, and Facebook, and Baidu, and so on, right? Because this is a kind of basic research that can be done by anyone in
+their garage and could change the world. So there are many, of course,
+many directions to attack this. But I see a lot of the fruitful
+interactions between ideas in deep learning and reinforcement learning
+being really important there. And I'm really excited that
+the progress in this direction Could have a huge impact on
+practical applications actually. Because if you look at some of the big
+challenges that we have in applications, like how we deal with new domains, or categories on which we
+have too few examples. And in cases where humans are very
+good at solving those problems. So these transfer learning and
+dramatization issues, they would become much easier to
+tackle if we had systems that had a better understanding
+of how the world works. A deeper understanding, right? What is actually going on? What are the causes of what I'm seeing? And how could I influence what
+I'm seeing by my actions? So these are the kinds of questions
+I'm really excited about these days. I think the connect, also the deep
+learning research that has evolved over the last couple of decades
+with even older questions in AI. Because a lot of the success in deep
+learning has been with perception. So what's left, right? What's left is sort of
+high level condition, which is about understanding at
+an abstract level how things work. So we are program of understanding high
+level abstractions I think has not reached those high levels of abstractions
+and so we have to get there. We have to think about reasoning, about
+sequential processing of information. We have to think of how
+causality works and how machines can discover all
+these things by themselves. Potentially guided by humans, but
+as much as possible in an autonomous way. >> And it sounds like from
+part of what you said that you're a fan of research approaches
+where you experiment on, I'm going to use term toy problem,
+not in a disparaging way. >> Right.
+>> But on the small problem. And you're optimistic that that
+transfers to bigger problems later. >> Yes, yes, it transfers in a way. Of course we're going to have
+to do some work to scale up and address those problems. But my main motivation for going for those toy problems is that we can
+understand better our failures and we can reduce the problem to
+something we can intuitively sort of manipulate and
+understand more easily. So sort of a classical divide and
+conquer science approach. And also, I think, something people
+don't think about it enough is the research cycle can be much faster,
+right? So if I can do an experiment in a few
+hours, I can progress much faster. If I have to try out a huge model that
+tries to capture the whole common sense and everything in the general
+knowledge, which eventually we'll do. It's just each experiment just takes
+too much time with current hardware. So while our hardware friends are building
+machines that are going to be a thousand or a million times faster,
+I'm doing those toy experiments. [LAUGH]
+>> You know, I've also heard you speak about the science of deep learning,
+not just as an engineering discipline, but doing more work to understand
+what's really going on. Do you want to share
+your thoughts on that? >> Yeah, absolutely. I fear that a lot of the work that we're
+doing is sort of like blind people trying to find their way. [LAUGH] And you can get a lot of luck and
+find interesting things that way. But really if we sort of
+stop a little bit and try to understand what we're doing
+in a way that's transferable, because we go down to
+principles to theory, but when I say theory I don't mean,
+necessarily, math. Of course I like math and so on, but
+I don't think that we need that everything be formalized mathematically but
+be formalized logically. In the sense that I can convince
+somebody that this should work, whether this make sense. This is the most important aspect. And then math allows us to make
+that stronger and tighter. But really it's more about understanding. And it's about also doing our research, not to be the next baseline,
+or benchmark, or beat the other guys in the other lab,
+or the other company. It's more about what kind of question
+should we ask that would allow us to understand better
+the phenomena of interest. What makes, for example, training in deeper networks harder,
+or current nets harder? We have some ideas, but
+a lot of things we don't understand yet. So we can maybe design experiments whose
+goal is not to have a better algorithm, but just to understand better
+the algorithms we currently have or what circumstances make the particular
+algorithm work better and why. It's the why that really matters. That's what's science is about. It's why. >> Right.
+Today there are a lot of people that want to enter the field. And I'm sure you've answered this
+a lot in one-on-one settings, but with all the people watching this on
+video, what advice would you have for people that want to get into AI,
+get into deep learning? >> Right, so first of all,
+there are different motivations and different things you can do. What you need to become a deep learning
+researcher may not be the same as if you want to be an engineer who's going to
+use deep learning to build products. There's a different level of understanding
+that's needed in both cases. But in any case in both cases, practice. So to really master a subject
+like deep learning, of course you have to read a lot. You have to practice programming
+the things yourself. Very often I interview students
+who have used software. And these days there's so many good
+software around that you can just plug and play and
+understand nothing of what you're doing. Or at such as a superficial level
+that then it becomes hard to figure out when it doesn't work and
+what's going wrong. So actually trying to implement things
+yourself, even if it's inefficient. But just to make sure you really
+understand what is going on is really useful, and trying things yourself. >> So don't just use one of the
+programming frameworks where you can do everything in a few lines of code, but
+you don't really know what just happened. >> Exactly, exactly, and
+I would say even more than that. Trying to derive the thing yourself
+from first principles, if you can. That really helps. But yeah, the usual things
+you have to do like reading, looking at other people's code,
+writing your own code, doing lots of experiment, making sure
+you understand everything you do. So especially for the science part of it, trying to ask why am I doing this,
+why are people doing this? Maybe the answer is somewhere in
+the book and you have to read more. But it's even better if you can
+actually figure it out by yourself. Yeah, cool, yeah. And in fact, of the things I read,
+you and Ian [INAUDIBLE] and Aaron [INAUDIBLE] wrote
+a highly regarded book. >> Thank you, thank you. Yes, it's selling a lot. It's a bit crazy. I feel like there is more people
+reading this book than people who can read it [LAUGH] right now. But yeah, also proceedings of the ICLR I conference is probably the best
+concentrated place of good papers. Of course there are really good papers
+at NIPS and ICML and other conferences. But if you really want to go for a lot
+of good papers, just read the last few ICLR proceedings, and that will give
+you really good view of the field. >> Cool, yeah. Any other thoughts? When people ask you for advice, how does
+someone become good at deep learning? >> Well,
+it depends on where you come from. Don't be afraid by the math. Just develop the intuitions, and
+then the math become really easier to understand once you get the hang of
+what's going on at the intuitive level. And one good news is that you don't
+need five years of PhD to become proficient at deep learning. You can actually learn pretty quickly. If you have a good background
+in computer science and math, you can learn enough to use it and
+build things and start research experiments
+in just a few months. Something like six months for
+people with the right training. Maybe they don't know anything
+about machine learning, but if they're good at math and
+computer science, it can be very fast. And of course, so that means you need
+to have the right training in math and computer science. Sometimes what you learn in just
+computer science courses is not enough. You need some continuous math, especially. So this is probability, algebra and
+optimization, for example. >> I see.
+And calculus. >> And calculus, yeah. >> Thanks a lot, Joshua, for sharing all
+of the comments and insights and advice. Even though I've known you for a long
+time, there are many details of your early history that I didn't know until now,
+so thank you. >> Well, thank you, Andrew, for doing this special recording and what you're doing. I hope it's going to be
+used by a lot of people.
